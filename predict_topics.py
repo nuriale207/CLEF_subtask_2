@@ -16,8 +16,6 @@ def create_arguments():
 
     parser.add_argument('--csv', dest='csv_file', nargs='+',
                         help='Path to the csv file with the users posts information.')
-    parser.add_argument('--labels', dest='csv_labels', nargs='+',
-                        help='Path to the csv file with the users labels.')
     parser.add_argument('--model', dest='model', nargs='+',
                         help='Path to the model.')
 
@@ -32,7 +30,6 @@ def create_arguments():
 if __name__ == '__main__':
     args = create_arguments()
     posts_dir = args.csv_file[0]
-    labels_dir = args.csv_labels[0]
     model_path=args.model[0]
 
     dest_dir=args.path_dir[0]
@@ -44,13 +41,7 @@ if __name__ == '__main__':
     posts_info=pd.read_csv(posts_dir)
     posts=list(posts_info["text"])
 
-    labels_info=pd.read_csv(labels_dir)
-    labels=list(posts_info["label"])
-    labels[30]=1
-    labels[200]=1
-    labels[20]=1
 
-    labels=[str(label) for label in labels]
 
     preprocessed_posts=preprocesado(posts,True,True,True)
 
@@ -60,7 +51,11 @@ if __name__ == '__main__':
             post=["blank"]
         topics=obtenerVectorTopics(plda_model,post)
         lista_topics.append(list(topics))
-    df_topics=pd.DataFrame(data={"id":posts_info["id"],"topics":lista_topics})
+
+    df_topics=pd.DataFrame(lista_topics)
+    df_topics_2=pd.DataFrame(data={"id":posts_info["id"]})
+    df_topics=pd.concat([df_topics_2, df_topics], axis=1)
+
     filepath = Path(dest_dir+'/'+posts_dir+"_topics.tsv")
     filepath.parent.mkdir(parents=True, exist_ok=True)
     df_topics.to_csv(filepath,sep='\t')

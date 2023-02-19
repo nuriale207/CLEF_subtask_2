@@ -21,13 +21,14 @@ def create_arguments():
                         help='Path to the csv file with the users posts information.')
     parser.add_argument('--labels', dest='csv_labels', nargs='+',
                         help='Path to the csv file with the users labels.')
-    parser.add_argument('-k', dest='topics_per_label', action='store', default=1,
+    parser.add_argument('-k', dest='topics_per_label', nargs='+', default=1,
                         help='Indicates the amount of topics per label to generate')
     parser.add_argument('-n', dest='topic_words',  nargs='+', default=1,
                         help='Indicates the amount of words to include in the topics information file')
     parser.add_argument('--path',dest='path_dir', nargs='+',
                         help='Path to the directory to save the generated plda model and json files.')
-
+    parser.add_argument('--generate', action="store_true",
+                        help="Set this flag to generate topics for the documents")
     args = parser.parse_args()
     return args
 
@@ -37,10 +38,14 @@ if __name__ == '__main__':
     posts_dir = args.csv_file[0]
     labels_dir = args.csv_labels[0]
     num_topics=args.topics_per_label[0]
+    print(num_topics)
+    num_topics=int(num_topics)
+    print("Num topics per label: "+str(num_topics))
+
+    predict=args.generate
     dest_dir=args.path_dir[0]
     n=args.topic_words[0]
-
-
+    print(n)
     posts_info=pd.read_csv(posts_dir)
     posts=list(posts_info["text"])
 
@@ -101,6 +106,29 @@ if __name__ == '__main__':
             topic_label_dict[j]={"label":plda_model.topic_label_dict[i],"sentiment_score":topic_sentiment_score}
             j += 1
             l += 1
+
+
+    if predict:
+        plda_model.train(500)
+        lista_topics = []
+        for post in preprocessed_posts:
+            if len(post) == 0:
+                post = ["blank"]
+            topics = obtenerVectorTopics(plda_model, post)
+            lista_topics.append(list(topics))
+
+        df_topics = pd.DataFrame(lista_topics)
+        df_topics_2 = pd.DataFrame(data={"id": posts_info["id"]})
+        df_topics = pd.concat([df_topics_2, df_topics], axis=1)
+
+        filepath = Path(dest_dir + '/' + posts_dir + "_topics.tsv")
+        filepath.parent.mkdir(parents=True, exist_ok=True)
+        df_topics.to_csv(filepath, sep='\t')
+
+        plda_model.save(dest_dir + '/plda_model.pkl')
+
+
+
     with open(dest_dir + '/topic_words.txt', 'w') as outfile:
         outfile.write(infoTopics)
 

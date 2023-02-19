@@ -1,8 +1,10 @@
 import unicodedata
-
+#import unicode
 import nltk
+from numpy.compat import unicode
+
+nltk.download('omw-1.4')
 from nltk.stem import WordNetLemmatizer, SnowballStemmer
-from numpy import unicode
 
 nltk.download('stopwords')
 #encoding: utf-8
@@ -80,7 +82,8 @@ def preprocesado(docs, pStemmer, pLemmatize, pStopwords):
 
             if (pStemmer == True and token != ""):
                 token = stemmer(token)
-
+            if (token.isdigit()):
+                token=""
             if (token != ""):
                 # token = unidecode.unidecode(token)
                 try:
@@ -90,11 +93,14 @@ def preprocesado(docs, pStemmer, pLemmatize, pStopwords):
                 token = unicodedata.normalize('NFD', token)
                 token = token.encode('ascii', 'ignore')
                 token = token.decode("utf-8")
-                filterText.append(token)
+                if not token.isdigit():
+                    filterText.append(token)
 
         i = i + 1
+        if i%100==0:
+            print("Procesado documento: " + str(i))
+
         preprocessed_docs.append(filterText)
-        print("Procesado documento: " + str(i))
 
     return preprocessed_docs
 
