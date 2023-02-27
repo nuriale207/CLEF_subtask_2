@@ -2,25 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d589e72-e8f4-4cae-a3b4-9066e90b56ce" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/CLEF_subtask_2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CLEF_subtask_2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generate_plda_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/generate_plda_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLEF_subset_labels.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLEF_subset_posts.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/predict_topics.py" beforeDir="false" afterPath="$PROJECT_DIR$/predict_topics.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/topics_trial/0.png" beforeDir="false" afterPath="$PROJECT_DIR$/topics_trial/0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/topics_trial/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/topics_trial/1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/topics_trial/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/topics_trial/2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/topics_trial/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/topics_trial/3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/topics_trial/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/topics_trial/4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/topics_trial/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/topics_trial/5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/topics_trial/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/topics_trial/6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/topics_trial/7.png" beforeDir="false" afterPath="$PROJECT_DIR$/topics_trial/7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/topics_trial/8.png" beforeDir="false" afterPath="$PROJECT_DIR$/topics_trial/8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/topics_trial/9.png" beforeDir="false" afterPath="$PROJECT_DIR$/topics_trial/9.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/topics_trial/CLEF_subset_posts.csv_topics.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/topics_trial/CLEF_subset_posts.csv_topics.tsv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/topics_trial/plda_model.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/topics_trial/plda_model.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/topics_trial/topic_label_dict.json" beforeDir="false" afterPath="$PROJECT_DIR$/topics_trial/topic_label_dict.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/topics_trial/topic_words.txt" beforeDir="false" afterPath="$PROJECT_DIR$/topics_trial/topic_words.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/topics_trial/0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/topics_trial/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/topics_trial/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/topics_trial/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/topics_trial/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/topics_trial/5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/topics_trial/6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/topics_trial/7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/topics_trial/8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/topics_trial/9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/topics_trial/CLEF_subset_posts.csv_topics.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/topics_trial/plda_model.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/topics_trial/topic_label_dict.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/topics_trial/topic_words.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/utils/preprocess_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/preprocess_data.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,6 +31,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/README.md" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="2LSG9xSeW77SxGbDEMgQ1yEakcO" />
   <component name="ProjectViewState">
@@ -41,7 +45,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "true",
-    "last_opened_file_path": "/home/nuria/PycharmProjects/CLEF_subtask_2/generate_plda_model.py"
+    "last_opened_file_path": "/home/nuria/PycharmProjects/CLEF_subtask_2/predict_topics.py",
+    "nodejs_package_manager_path": "npm"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -52,7 +57,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.predict_topics">
     <configuration name="generate_plda_model" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="CLEF_subtask_2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -75,6 +80,32 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="predict_topics" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="CLEF_subtask_2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/.venvs/CLEF_subtask_2/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/predict_topics.py" />
+      <option name="PARAMETERS" value="--csv str_test_reduced_2000.csv --model topics_trial/plda_model.pkl --path ." />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.generate_plda_model" />
+      <item itemvalue="Python.predict_topics" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -87,7 +118,11 @@
       <workItem from="1675856923705" duration="446000" />
       <workItem from="1676035752968" duration="8613000" />
       <workItem from="1676307966702" duration="1474000" />
-      <workItem from="1676826267686" duration="3936000" />
+      <workItem from="1676826267686" duration="4233000" />
+      <workItem from="1677147774144" duration="3123000" />
+      <workItem from="1677326029624" duration="4804000" />
+      <workItem from="1677431159942" duration="763000" />
+      <workItem from="1677496802049" duration="3422000" />
     </task>
     <servers />
   </component>
@@ -109,14 +144,20 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/utils/data_reader.py</url>
-          <line>1</line>
-          <option name="timeStamp" value="1" />
+          <url>file://$PROJECT_DIR$/predict_topics.py</url>
+          <line>60</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/predict_topics.py</url>
+          <line>34</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/CLEF_subtask_2$predict_topics.coverage" NAME="predict_topics Coverage Results" MODIFIED="1677509022600" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CLEF_subtask_2$preprocess_data.coverage" NAME="preprocess_data Coverage Results" MODIFIED="1676828660792" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/CLEF_subtask_2$generate_plda_model.coverage" NAME="generate_plda_model Coverage Results" MODIFIED="1676830528905" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>

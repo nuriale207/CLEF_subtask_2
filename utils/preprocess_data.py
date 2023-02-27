@@ -56,7 +56,35 @@ def clean(doc):
     merged=' '.join([word for word in cleaned.split() if word])
     return merged
 
+def preprocesado_token(token,pStemmer, pLemmatize, pStopwords):
+    """ Realiza el preprocesado de un token aplicandole el Stemmer, lemmatizador y el stopwords
 
+                    Parámetros:
+                           token -- String que con un solo token
+                           pStemmer -- True si se quiere aplicar el stemmer, False en otro caso
+                           pLemmatize -- True si se quiere aplicar el lemmatizer, False en otro caso
+                           pStopwords -- True si se quiere aplicar el stopwords, False en otro caso
+       """
+    if (pStopwords == True):
+        token = stopWords(token)
+
+    if (pLemmatize == True and token != ""):
+        token = lemmatize(token)
+
+    if (pStemmer == True and token != ""):
+        token = stemmer(token)
+    if (token.isdigit()):
+        token = ""
+    if (token != ""):
+        # token = unidecode.unidecode(token)
+        try:
+            token = unicode(token, 'utf-8')
+        except (TypeError, NameError):  # unicode is a default on python 3
+            pass
+        token = unicodedata.normalize('NFD', token)
+        token = token.encode('ascii', 'ignore')
+        token = token.decode("utf-8")
+    return token
 def preprocesado(docs, pStemmer, pLemmatize, pStopwords):
     """ Realiza el preprocesado del String doc aplicandole el Stemmer, lemmatizador y el stopwords
 
@@ -74,27 +102,9 @@ def preprocesado(docs, pStemmer, pLemmatize, pStopwords):
         filterText = []
         tokens = text.split(' ')
         for token in tokens:
-            if (pStopwords == True):
-                token = stopWords(token)
-
-            if (pLemmatize == True and token != ""):
-                token = lemmatize(token)
-
-            if (pStemmer == True and token != ""):
-                token = stemmer(token)
-            if (token.isdigit()):
-                token=""
-            if (token != ""):
-                # token = unidecode.unidecode(token)
-                try:
-                    token = unicode(token, 'utf-8')
-                except (TypeError, NameError):  # unicode is a default on python 3
-                    pass
-                token = unicodedata.normalize('NFD', token)
-                token = token.encode('ascii', 'ignore')
-                token = token.decode("utf-8")
-                if not token.isdigit():
-                    filterText.append(token)
+            token=preprocesado_token(token,pStemmer,pLemmatize,pStopwords)
+            if not token.isdigit():
+                filterText.append(token)
 
         i = i + 1
         if i%100==0:
