@@ -85,6 +85,16 @@ def preprocesado_token(token,pStemmer, pLemmatize, pStopwords):
         token = token.encode('ascii', 'ignore')
         token = token.decode("utf-8")
     return token
+
+def preprocesado_post(post,pStemmer, pLemmatize, pStopwords):
+    text = clean(post)
+    filterText = []
+    tokens = text.split(' ')
+    for token in tokens:
+        token = preprocesado_token(token, pStemmer, pLemmatize, pStopwords)
+        if not token.isdigit():
+            filterText.append(token)
+    return filterText
 def preprocesado(docs, pStemmer, pLemmatize, pStopwords):
     """ Realiza el preprocesado del String doc aplicandole el Stemmer, lemmatizador y el stopwords
 
@@ -98,13 +108,7 @@ def preprocesado(docs, pStemmer, pLemmatize, pStopwords):
     i = 0
     preprocessed_docs = []
     for text in docs:
-        text = clean(text)
-        filterText = []
-        tokens = text.split(' ')
-        for token in tokens:
-            token=preprocesado_token(token,pStemmer,pLemmatize,pStopwords)
-            if not token.isdigit():
-                filterText.append(token)
+        filterText=preprocesado_post(text,pStemmer,pLemmatize,pStopwords)
 
         i = i + 1
         if i%100==0:

@@ -2,26 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d589e72-e8f4-4cae-a3b4-9066e90b56ce" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CLEF_subset_labels.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CLEF_subset_posts.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/predict_topics.py" beforeDir="false" afterPath="$PROJECT_DIR$/predict_topics.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/topics_trial/0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/topics_trial/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/topics_trial/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/topics_trial/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/topics_trial/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/topics_trial/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/topics_trial/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/topics_trial/7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/topics_trial/8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/topics_trial/9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/topics_trial/CLEF_subset_posts.csv_topics.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/topics_trial/plda_model.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/topics_trial/topic_label_dict.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/topics_trial/topic_words.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/utils/preprocess_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/preprocess_data.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -122,7 +102,7 @@
       <workItem from="1677147774144" duration="3123000" />
       <workItem from="1677326029624" duration="4804000" />
       <workItem from="1677431159942" duration="763000" />
-      <workItem from="1677496802049" duration="3422000" />
+      <workItem from="1677496802049" duration="3750000" />
     </task>
     <servers />
   </component>

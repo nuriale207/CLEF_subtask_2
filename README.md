@@ -45,13 +45,13 @@ The runnable gets a one column CSV file with just the posts in that column and r
 
 ### USEFUL CODE SNIPPETS
 
-Code snipet to preprocess documents and infer vectors given a PLDA model path
+Code snipet to preprocess one post and infer it's topic distribution given a PLDA model path
 
     from utils.generate_topics import obtenerVectorTopics, load_PLDA_model
     from utils.preprocess_data import preprocesado
 
     plda_model=load_PLDA_model(model_path)
-    preprocessed_posts=preprocesado(posts,True,True,True)
+    preprocessed_text=preprocesado_post(post,True,True,True)
     topics=obtenerVectorTopics(plda_model,post)
 
 
